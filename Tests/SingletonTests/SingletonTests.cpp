@@ -1,5 +1,5 @@
-#include "../acutest/acutest.h"
-#include "../Patterns/Creational/Singleton/Singleton.hpp"
+#include <acutest.h>
+#include <Singleton.hpp>
 
 void starts_as_nullptr() {
     TEST_ASSERT(SingletonClass::PeekInstance() == nullptr);
