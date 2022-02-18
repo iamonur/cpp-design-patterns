@@ -3,6 +3,7 @@ project(designPatterns VERSION 0.1.0)
 
 include_directories(.)
 include_directories(Patterns/Creational/Singleton)
+include_directories(Patterns/Creational/Prototype)
 include_directories(Tests)
 include_directories(Common)
 include_directories(acutest)
