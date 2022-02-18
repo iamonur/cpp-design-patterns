@@ -1,4 +1,4 @@
-#include "Singleton.hpp"
+#include <Singleton.hpp>
 SingletonClass* SingletonClass::instance = nullptr;
 
 SingletonClass* SingletonClass::GetInstance(){
