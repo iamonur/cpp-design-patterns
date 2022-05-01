@@ -1,41 +1,34 @@
 #include <string>
 
-class Prod
-{
+class Prod {
 public:
     virtual ~Prod();
     virtual std::string getName() = 0;
 };
 
-class ConcProdOne : public Prod
-{
+class ConcProdOne : public Prod {
 public:
     ~ConcProdOne();
     std::string getName();
 };
 
-class ConcProdTwo : public Prod
-{
+class ConcProdTwo : public Prod {
 public:
     ~ConcProdTwo();
     std::string getName();
 };
 
-class FactoryInterface
-{
+class FactoryInterface {
 public:
     virtual ~FactoryInterface();
     virtual Prod* giveProductOne() = 0;
     virtual Prod* giveProductTwo() = 0;
 };
 
-
-
-class ConcreteCreator : public FactoryInterface
-{
+class ConcreteCreator : public FactoryInterface {
 public:
     ~ConcreteCreator();
     Prod* giveProductOne();
     Prod* giveProductTwo();
-    void removeProduct( Prod *product );
+    void removeProduct(Prod* product);
 };

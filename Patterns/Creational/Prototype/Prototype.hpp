@@ -11,6 +11,7 @@ class ConcretePrototypeA : public Prototype {
     std::string state;
     ConcretePrototypeA(std::string in);
     friend class ThatGuy;
+
 public:
     ~ConcretePrototypeA();
     Prototype* Clone();

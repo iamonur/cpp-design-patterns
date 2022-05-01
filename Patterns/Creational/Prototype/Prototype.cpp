@@ -1,25 +1,29 @@
 #include <Prototype.hpp>
 
-Prototype::~Prototype() {
-
+Prototype::~Prototype()
+{
 }
 
-ConcretePrototypeA::~ConcretePrototypeA() {
-
+ConcretePrototypeA::~ConcretePrototypeA()
+{
 }
 
-Prototype* ConcretePrototypeA::Clone() {
+Prototype* ConcretePrototypeA::Clone()
+{
     return new ConcretePrototypeA(state);
 }
 
-ConcretePrototypeA::ConcretePrototypeA(std::string in) : state(in) {
-
+ConcretePrototypeA::ConcretePrototypeA(std::string in)
+    : state(in)
+{
 }
 
-std::string ConcretePrototypeA::getState() {
-    return state;    
+std::string ConcretePrototypeA::getState()
+{
+    return state;
 }
 
-Prototype* ThatGuy::gimme() {
+Prototype* ThatGuy::gimme()
+{
     return new ConcretePrototypeA("State A");
 }

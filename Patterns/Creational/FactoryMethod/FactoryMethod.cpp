@@ -1,37 +1,41 @@
 #include <FactoryMethod.hpp>
 
-Prod::~Prod() {
-
+Prod::~Prod()
+{
 }
 
-std::string ConcProdOne::getName() {
+std::string ConcProdOne::getName()
+{
     return "Prod one";
 }
 
-ConcProdOne::~ConcProdOne() {
-
+ConcProdOne::~ConcProdOne()
+{
 }
 
-std::string ConcProdTwo::getName() {
+std::string ConcProdTwo::getName()
+{
     return "Prod two";
 }
 
-ConcProdTwo::~ConcProdTwo() {
-
+ConcProdTwo::~ConcProdTwo()
+{
 }
 
-FactoryInterface::~FactoryInterface() {
-
+FactoryInterface::~FactoryInterface()
+{
 }
 
-Prod* ConcreteCreator::giveProductOne() {
+Prod* ConcreteCreator::giveProductOne()
+{
     return new ConcProdOne();
 }
 
-Prod* ConcreteCreator::giveProductTwo() {
+Prod* ConcreteCreator::giveProductTwo()
+{
     return new ConcProdTwo();
 }
 
-ConcreteCreator::~ConcreteCreator() {
-
+ConcreteCreator::~ConcreteCreator()
+{
 }
