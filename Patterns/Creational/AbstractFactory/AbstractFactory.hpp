@@ -13,24 +13,36 @@ public:
 };
 
 class ProductAX : public ProductA {
+    ProductAX();
+    friend class AbstractFactoryX;
+
 public:
     ~ProductAX();
     std::string getProdAName();
 };
 
 class ProductAY : public ProductA {
+    ProductAY();
+    friend class AbstractFactoryY;
+
 public:
     ~ProductAY();
     std::string getProdAName();
 };
 
 class ProductBX : public ProductB {
+    ProductBX();
+    friend class AbstractFactoryX;
+
 public:
     ~ProductBX();
     std::string getProdBName();
 };
 
 class ProductBY : public ProductB {
+    ProductBY();
+    friend class AbstractFactoryY;
+
 public:
     ~ProductBY();
     std::string getProdBName();
