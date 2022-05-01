@@ -1,3 +1,6 @@
+#ifndef ABS_FAC_HPP
+#define ABS_FAC_HPP
+
 #include <string>
 
 class ProductA {
@@ -68,3 +71,5 @@ public:
     ProductA* createProductA();
     ProductB* createProductB();
 };
+
+#endif // ABS_FAC_HPP
