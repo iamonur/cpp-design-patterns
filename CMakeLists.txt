@@ -12,6 +12,7 @@ include_directories(Patterns/Structural/ObjectAdapter)
 include_directories(Patterns/Structural/ClassAdapter)
 include_directories(Patterns/Structural/Bridge)
 include_directories(Patterns/Structural/Composite)
+include_directories(Patterns/Structural/Decorator)
 include_directories(Common)
 include_directories(acutest)
 
@@ -45,6 +46,9 @@ AUX_SOURCE_DIRECTORY(Tests/BridgeTests BRIDGE_TESTS)
 AUX_SOURCE_DIRECTORY(Patterns/Structural/Composite COMPOSITE_FILES)
 AUX_SOURCE_DIRECTORY(Tests/CompositeTests COMPOSITE_TESTS)
 
+AUX_SOURCE_DIRECTORY(Patterns/Structural/Decorator DECORATOR_FILES)
+AUX_SOURCE_DIRECTORY(Tests/DecoratorTests DECORATOR_TESTS)
+
 add_executable(singletonTest ${SINGLETON_TESTS} ${SINGLETON_FILES})
 add_executable(prototypeTest ${PROTOTYPE_TESTS} ${PROTOTYPE_FILES})
 add_executable(factoryMethodTest ${FACTORY_METHOD_TESTS} ${FACTORY_METHOD_FILES})
@@ -55,6 +59,7 @@ add_executable(objectAdapterTests ${OBJECT_ADAPTER_TESTS} ${OBJECT_ADAPTER_FILES
 add_executable(classAdapterTests ${CLASS_ADAPTER_TESTS} ${CLASS_ADAPTER_FILES})
 add_executable(bridgeTests ${BRIDGE_TESTS} ${BRIDGE_FILES})
 add_executable(compositeTests ${COMPOSITE_TESTS} ${COMPOSITE_FILES})
+add_executable(decoratorTests ${DECORATOR_TESTS} ${DECORATOR_FILES})
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
