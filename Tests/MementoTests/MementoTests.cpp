@@ -9,9 +9,6 @@ void savingWorks()
     own->setState(42);
     orc->save();
 
-    own->setState(31);
-    orc->undo();
-
     TEST_ASSERT(own->getState() == 42);
 }
 
